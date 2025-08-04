@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="myLibraryBox">
+
+        <aside class="sidebar">
+            <div class="logo">🕮 Library</div>
+            <ul class="links">
+                <li><div class="icon">🏠︎</div> <div class="textLink">Home</div></li>
+                <li class="theLink"><div class="icon">☕︎</div> <div class="textLink">My Library</div></li>
+            </ul>
+            <button class="textLink" id="btn">✚ Add Book</button>
+        </aside>
+        <main class="main">
+            <div class="search">🔍︎<input placeholder="Search in My Library"></div>
+            <div class="myBooks">
+                <div class="shelf" id="shelf2">Want to Read<div class="nextUp">
+
+                </div></div>
+
+                <div class="shelf" id="shelf1">Currently reading<div class="currentlyReading">
+            
+                </div></div>
+                
+                <div class="shelf" id="shelf3">Finished<div class="finished">
+                    
+                </div></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <span>Created by Angelika Kowalik for The Odin Project</span>
+        </footer>
+    </div>
+        <div class="overlay hidden">
+            <div class="form">
+                <div>
+                <form action="" method="POST">
+                    <label for="name">Title</label>
+                    <input type="text" id="name" name="name">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" name="pages">
+                    <label for="img">Img</label>
+                    <input type="link" id="img" name="img" placeholder="https://example.com">
+                    <fieldset>
+                        <legend>Reading status</legend>
+                            <label>
+                            <input type="radio" name="read" value="Finished" required>
+                            Finished
+                            </label>
+                            <label>
+                            <input type="radio" name="read" value="Currently Reading">
+                            Currently Reading
+                            </label>
+                            <label>
+                            <input type="radio" name="read" value="Want to Read">
+                            Want to Read
+                            </label>
+                    </fieldset>
+                     <button class="add" type="button">Add Book</button>
+                </form>
+                
+                </div>
+                <button class="btnExit">×</button>
+            </div>
+        </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
