@@ -102,15 +102,15 @@ li:hover{
     padding-top: 10px;
 }
 .shelf{
-    height: 140px;
+    height: 250px;
     width: 700px;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     padding-bottom: 0px;
     border-bottom: 10px solid rgb(87, 59, 24);
     border-radius: 10px;
-    overflow-x: auto;
-    overflow-y: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .shelf::-webkit-scrollbar {
@@ -127,6 +127,7 @@ li:hover{
 
 .currentlyReading, .nextUp, .finished{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .footer{
@@ -226,8 +227,15 @@ form, fieldset {
     grid-area: 1/1/2/2;
     padding: 0px;
     margin-right: 5px;
-    z-index: 1;
     text-shadow: 1px 1px 0px black;
+    z-index: 1;
+}
+.book .btnDelete{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.book:hover .btnDelete{
+    opacity: 1;
 }
 .btnEdit{
     align-self: flex-start;
@@ -240,8 +248,15 @@ form, fieldset {
     margin: 0px;
     grid-area: 1/2/2/3;
     padding: 0px;
-    z-index: 1;
     text-shadow: 1px 1px 0px black;
+    z-index: 1;
+}
+.book .btnEdit{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.book:hover .btnEdit{
+    opacity: 1;
 }
 .text{
     grid-area: 2/1/3/8;
@@ -251,6 +266,13 @@ form, fieldset {
     word-wrap: break-word;
     z-index: 1;
 }
+.book .text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.book:hover .text {
+    opacity: 1;
+}
 .imgOverlay{
     background-color: rgba(107, 77, 37, 0.46);
     position: absolute;
@@ -258,4 +280,10 @@ form, fieldset {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.book .imgOverlay{
+    opacity: 0;
+}
+.book:hover .imgOverlay{
+    opacity: 1;
 }
