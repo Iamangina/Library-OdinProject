@@ -26,14 +26,24 @@ body{
     color: rgb(107, 77, 37);
 }
 .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     font-size: 30px;
     font-weight: bold;
+}
+.logo svg{
+    fill: rgb(107, 77, 37);
+    width: 30px;
 }
 ul{
     list-style: none;
 }
 ul li{
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 25px;
     gap: 10px;
     font-size: 20px;
@@ -52,7 +62,22 @@ li:hover{
     background-color: rgba(246, 239, 231, 0.5);
     border-radius: 20px;
 }
+li svg{
+    fill: rgb(107, 77, 37);
+    width: 25px;
+}
+.search svg{
+    fill: rgb(107, 77, 37);
+    width: 25px;
+}
+#btn svg{
+    fill: rgb(107, 77, 37);
+    width: 25px;
+}
 #btn{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
     margin-top: auto;
     color: rgb(107, 77, 37);
     font-size: 25px;
@@ -155,31 +180,49 @@ li:hover{
 }
 .form{
     display: flex;
+    gap: 10px;
     background-color: rgb(255, 253, 251);
     border-radius: 10px;
+    color: rgb(107, 77, 37);
     box-shadow: 0px 0px 10px rgba(107, 77, 37, 0.5);
     padding: 10px;
-    padding-left: 20px;
-    width: 200px;
-    height: 350px;
+    padding-left: 40px;
+    width: 220px;
+    height: 410px;
     position: static;
-    
+    font-weight: bold;
 }
-form, fieldset {
+form fieldset {
     display: flex;
     align-items: start;
+    font-weight: 500;
     flex-direction: column;
     color: rgb(107, 77, 37);
+}
+legend{
+    font-weight: bold;
+}
+form input{
+    border-radius: 10px;
+    border: 1px solid rgb(107, 77, 37);
+    padding: 5px;
+}
+
+input:invalid{
+    border: 1px solid rgba(204, 85, 0);
+}
+.infoRequired{
+    font-size: 10px;
+    font-weight: lighter;
 }
 .btnExit{
     align-self: flex-start;
     background-color: rgb(242, 240, 237);
     color: rgb(107, 77, 37);
     width: 30px;
-    height: 30px;
     font-size: 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 .add{
     margin-left: 30px;
