@@ -30,8 +30,9 @@ const author = document.querySelector("#author");
 const pages = document.querySelector("#pages");
 const img = document.querySelector("#img");
 
-// Book constructor
-function Book(name, author, pages, read, img){  
+// Book class
+class Book{
+constructor(name, author, pages, read, img){  
     this.name = name;
     this.author = author;
     this.pages = pages;
@@ -39,8 +40,7 @@ function Book(name, author, pages, read, img){
     this.id = crypto.randomUUID();
     this.img = img;
 }
-
-// Create a Book object and add it to the array
+}
 function addBookToLibrary(name, author, pages, read, img){ 
     const newBook = new Book(name, author, pages, read, img);
     myLibrary.push(newBook);
